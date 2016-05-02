@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="feed.css">
+        <title>MASHED</title>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+           google.load("feeds", "1");
+
+           function OnLoad() {
+           // Create a feed control
+           var feedControl = new google.feeds.FeedControl();
+            feedControl.setNumEntries(7);
+
+          // Add two feeds.
+          feedControl.addFeed("http://rss.weather.com/rss/national/rss_nwf_rss.xml?cm_ven=NWF&cm_cat=rss&par=NWF_rss", "National Weather");
+          feedControl.addFeed("http://feeds.people.com/people/headlines", "People Magazine");
+          feedControl.addFeed("http://sports.espn.go.com/espn/rss/news", "ESPN");
+          feedControl.addFeed("http://rss.cnn.com/rss/cnn_topstories.rss", "CNN");
+
+          // Draw it.
+          feedControl.draw(document.getElementById("google_feeds"));
+          }
+
+          google.setOnLoadCallback(OnLoad);
+        </script>
+   </head>
+   <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="Feed.html">Feeds</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+        <h1>Lots of RSS Feeds</h1>
+        <div id="google_feeds"></div>
+   </body>
+</html> 

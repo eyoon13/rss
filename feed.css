@@ -1,0 +1,46 @@
+<style>
+      .gfc-resultsHeader {border:none;}
+      .gfc-title {font-size: 22px; font-weight:bold; margin-top:12px;}
+
+ @charset "utf-8";
+/* CSS Document */
+
+
+body {
+	background-color:#E3FDF8;
+}
+
+h1	{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 2em;
+	text-align: center;
+	color:#5C5C5C;
+}
+
+h2 {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	color:#606060;
+	margin: 25px;
+}
+
+a {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	text-decoration: underline;
+	color:#323232;
+}
+
+a:hover {
+	text-decoration:underline;
+	color:#352DCE;
+	background-color:#efecec;
+}
+
+ul {
+	list-style:circle;
+	margin-left:-15px;	
+}
+
+
+ </style>
