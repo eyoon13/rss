@@ -3,6 +3,23 @@
 <body>
 <?php
 
+if($_POST['login']){
+	$data = file_get_contents('results.json');
+	$tempArray = json_decode($data,true);
+
+	$user= $_POST['username'];
+    $pass= $_POST['password'];
+
+    foreach ($tempArray as $key => $value) {
+	    	if($value["Username"] == $user && $value["Password"] == $pass){
+	    		header('Refresh:0; URL = Feed.html');
+	    	}
+	    	else{
+	    		header('Refresh:0; URL = index.html');
+	    	}
+  		}
+}
+
 
 if($_POST['reg']){
    $username = $_POST['username'];
